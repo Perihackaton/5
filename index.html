@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Personal05</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width = device-width, initial-scale=1">
+	<link rel="stylesheet" href="main.css">
+	<link rel="import" href="imports.html">
+</head>
+<body>
+<paper-drawer-panel>
+	<paper-header-panel drawer>
+		
+	</paper-header-panel>
+	<paper-header-panel main>
+		<paper-toolbar id="main-toolbar">
+			<paper-icon-button id="toolbar-button" icon="menu"></paper-icon-button>
+			<div id="toolbar-title"></div>
+		</paper-toolbar>
+		<div id="main-container">
+			<div>
+				<paper-progress value="10"></paper-progress>
+			</div>
+			<neon-animated-pages id="pages" selected="3">
+			    <section id="select-service"></section>
+			    <section id="service-subcategories"></section>
+			    <section  id="coments-and-photo">
+			    	<paper-textarea label="Напишите Коментарий"></paper-textarea>
+			    	<paper-input type="file"></paper-input>
+			    	<paper-button>Пропустить</paper-button>
+			    </section>
+			    <section  id="adress">
+			    	<paper-input label="Введите адрес"></paper-input>
+			    	<google-map></google-map>
+			    </section>
+			</neon-animated-pages>
+		</div>
+	</paper-header-panel>
+</paper-drawer-panel>
+<script src="main.js"></script>
+</body>
+</html>
