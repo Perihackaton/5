@@ -8,30 +8,53 @@
 	<link rel="import" href="imports.html">
 </head>
 <body>
-<paper-drawer-panel>
+<paper-drawer-panel force-narrow>
 	<paper-header-panel drawer>
 		
 	</paper-header-panel>
 	<paper-header-panel main>
 		<paper-toolbar id="main-toolbar">
 			<paper-icon-button id="toolbar-button" icon="menu"></paper-icon-button>
-			<div id="toolbar-title"></div>
+			<div id="toolbar-title" class="title"></div>
 		</paper-toolbar>
 		<div id="main-container">
 			<div>
-				<paper-progress value="10"></paper-progress>
+				<paper-progress id="progress" value="10"></paper-progress>
 			</div>
-			<neon-animated-pages id="pages" selected="3">
+			<neon-animated-pages id="pages" selected="0">
 			    <section id="select-service"></section>
 			    <section id="service-subcategories"></section>
-			    <section  id="coments-and-photo">
-			    	<paper-textarea label="Напишите Коментарий"></paper-textarea>
-			    	<paper-input type="file"></paper-input>
-			    	<paper-button>Пропустить</paper-button>
+			    <section  id="problem-description">
+			    <form id="form" enctype="multipart/form-data">
+			    	<input id="subcategory-id" name="id" type="number" hidden>
+			    	<div class="label">Опишите проблему:</div>
+			    	<div id="problem">
+			    		<textarea name="problem"></textarea>
+			    		<label>
+			    			<paper-input name="photo" hidden type="file"></paper-input>
+			    			<paper-icon-button icon="image:add-a-photo"></paper-icon-button>
+		    			</label>
+		    		</div>
+		    		<div class="label">Уточните адрес:</div>
+			    	<div id="address">
+			    		<input type="text" name="address"></input>
+			    		<paper-icon-button icon="maps:my-location" id="show-map-dialog"></paper-icon-button>
+			    	</div>
+			    	<paper-dialog id="map-dialog">
+			    		<div><input type="text"><paper-button>Ок</paper-button></div>
+			    		<google-map click-events id="google-map" disable-default-ui markers zoom=13></google-map>
+			    	</paper-dialog>
+			    	<div class="label">Выберите время:</div>
+			    	<div id="date">
+			    		<input type="date" name="date" label="Выберите время"></input>
+			    	</div>		    	
+			    	<paper-button raised id="to-last-page">Далее</paper-button>
+		    	</form>
 			    </section>
-			    <section  id="adress">
-			    	<paper-input label="Введите адрес"></paper-input>
-			    	<google-map></google-map>
+			    <section id="phone-number">
+			    	<gold-phone-input country-code="7" type="number" id="phone" name="phone" label="Введите номер телефона"></gold-phone-input>
+			    	<paper-checkbox checked>Исполнители могут мне позвонить</paper-checkbox>    	
+			    	<paper-button id="send" raised>Далее</paper-button>
 			    </section>
 			</neon-animated-pages>
 		</div>

@@ -26,6 +26,10 @@
     "paper-progress": "PolymerElements/paper-progress#~1.0.8",
     "paper-input": "PolymerElements/paper-input#~1.1.5",
     "google-map": "GoogleWebComponents/google-map#~1.1.9",
-    "paper-button": "PolymerElements/paper-button#~1.0.11"
+    "paper-button": "PolymerElements/paper-button#~1.0.11",
+    "paper-toggle-button": "PolymerElements/paper-toggle-button#~1.0.14",
+    "paper-dialog": "PolymerElements/paper-dialog#~1.0.3",
+    "paper-checkbox": "PolymerElements/paper-checkbox#~1.1.0",
+    "gold-phone-input": "PolymerElements/gold-phone-input#~1.0.7"
   }
 }

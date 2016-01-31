@@ -10,13 +10,17 @@
 	align-items: center;
 }
 paper-progress{
-	margin: 5%;
+	padding: 15% 0;
 }
 neon-animated-pages{
 	width: 100%;
 }
-#select-service{
+
+section{
 	padding: 5%;
+}
+#select-service{
+	padding: 0;
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
@@ -29,6 +33,112 @@ neon-animated-pages{
 	text-align: center;
 	padding: 3%;
 }
-google-map{
+/*#problem-description div{
+	display: flex;
+	justify-content: space-beetwen;
+	align-items: center;
+}*/
+#problem-description span{
+	text-align: center;
+}
+
+#map-dialog google-map{
 	height: 50vh;
+	margin: 0;
+}
+paper-dialog{
+	width: 90%;
+}
+#empty-code{
+	display: flex;
+	justify-content: center;
+}
+
+#empty-code input{
+	width: 50%;
+}
+
+#problem{
+	display: flex;
+	align-items: flex-end;
+}
+
+#problem textarea{
+	border: none;
+	outline: none;
+	width: 100%;
+	height: 10vh;
+	background-color: #DDD;
+}
+
+#problem label{
+	position: relative;
+	right: 40px;
+	margin-right: -40px;
+}
+
+.label{
+	text-align: center;
+	margin: 20px;
+}
+
+#address{
+	display: flex;
+	background-color: #ccc;
+}
+
+#address input{
+	width: 100%;
+	border: none;
+	outline: none;
+	background-color: #ddd;
+}
+
+#date input{
+	width: 100%;
+	border: none;
+	outline: none;
+	background-color: #ddd;
+	height: 5vh;
+}
+
+#to-last-page{
+	width: 100%;
+	margin: 10% 0;
+	background-color: #fcbe00;
+	color: #fff;
+}
+
+#map-dialog div{
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
+#map-dialog paper-button{
+	background-color: #fcbe00;
+	color: #fff;
+	margin: 0;
+}
+
+#map-dialog input{
+	width: 100%;
+	border: none;
+	outline: none;
+	background-color: #ddd;
+}
+
+#send{
+	margin-top: 20px;
+	width: 100%;
+	background-color: #fcbe00;
+	color: #fff;
+}
+input, textarea{
+	padding: 2%;
+	box-sizing: border-box;
+}
+
+#empty-code{
+	margin: 10%;
 }
